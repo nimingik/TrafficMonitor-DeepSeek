@@ -1,6 +1,5 @@
 # TrafficMonitor-DeepSeek
 
-[![Build](https://github.com/nimingik/TrafficMonitor-DeepSeek/actions/workflows/build.yml/badge.svg)](https://github.com/nimingik/TrafficMonitor-DeepSeek/actions/workflows/build.yml)
 [![Release](https://img.shields.io/github/v/release/nimingik/TrafficMonitor-DeepSeek)](https://github.com/nimingik/TrafficMonitor-DeepSeek/releases/latest)
 [![License: Anti 996](https://img.shields.io/badge/license-Anti%20996-blue.svg)](LICENSE)
 ![Platform: Windows x64](https://img.shields.io/badge/platform-Windows%20x64-0078D6.svg)
@@ -146,7 +145,7 @@ zig c++ -target x86_64-windows-gnu -O2 -g0 test_period.cpp -o test_period.exe
 .\test_period.exe
 ```
 
-`test_period.cpp` 通过 `#include` 主源码直接测试纯函数 `CalcPeriodAt()`，覆盖工作日、午休、周末、2026 全部节假日与补班日、9:00/12:00/14:00/18:00 边界、跨周末与长假倒计时、ini 扩展，共 43 项断言。GitHub Actions 在 `windows-latest` 上每次 push / PR 自动执行构建与测试。
+`test_period.cpp` 通过 `#include` 主源码直接测试纯函数 `CalcPeriodAt()`，覆盖工作日、午休、周末、2026 全部节假日与补班日、9:00/12:00/14:00/18:00 边界、跨周末与长假倒计时、ini 扩展，共 43 项断言。构建与测试均可用 `build.ps1 -Test` 在本地一键完成，不依赖 CI 服务。
 
 ### 目录结构
 
@@ -156,7 +155,6 @@ zig c++ -target x86_64-windows-gnu -O2 -g0 test_period.cpp -o test_period.exe
 ├── build.ps1                 一键构建 / 测试脚本
 ├── install_update.bat        Release 包内的通用安装脚本（拖拽/输入 TM 安装目录）
 ├── test_period.cpp            43 项时段规则单元测试
-├── .github/workflows/build.yml  CI
 ├── LICENSE                   "Anti 996" License 1.0 (Draft) 原文
 ├── THIRD_PARTY_NOTICES.md    版权归属、第三方与商标声明
 └── CHANGELOG.md
