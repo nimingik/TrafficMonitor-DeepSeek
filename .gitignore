@@ -1,0 +1,36 @@
+# !! 含 API Key，绝不提交 !!
+*.ini
+deepseek_monitor.ini
+
+# 构建产物（预编译 DLL 通过 GitHub Releases 分发，不入库）
+*.dll
+*.exe
+*.obj
+*.o
+*.a
+*.lib
+*.pdb
+*.ilk
+*.exp
+*.res
+
+# 打包 / 缓存 / 工具链
+*.zip
+*.7z
+*.tar.gz
+*.whl
+.zig-cache/
+zig-cache/
+zig-out/
+build/
+out/
+tools/ziglang/
+
+# 编辑器 / 系统
+.vs/
+.vscode/
+.idea/
+*.user
+Thumbs.db
+desktop.ini
+.DS_Store
